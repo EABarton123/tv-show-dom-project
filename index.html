@@ -9,9 +9,17 @@
   </head>
 
   <body>
-    <header id='header'></header>
-    <div id="root">
-    </div>
+    <header id='header'>
+      <select id="select">
+        <option value="all">
+          all
+        </option>
+      </select>
+      <input type="text" id="search">
+      <span id="selectedEpisodes"></span>
+    </header>
+    <ul id="root">
+    </ul>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
