@@ -10,7 +10,13 @@
 
   <body>
     <header id='header'>
-      <select id="select">
+      <select id="selectAShow">
+        <option value="all">
+          all
+        </option>
+      </select>
+      <span id="selectedShows"></span>
+      <select id="selectAnEpisode">
         <option value="all">
           all
         </option>
@@ -22,8 +28,11 @@
     </ul>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+<!-- <script src="episodes.js"></script> -->
 
+<!-- Loads shows code -->
+<script src="shows.js"></script>
+<script src="episodes.js"></script>
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
   </body>
