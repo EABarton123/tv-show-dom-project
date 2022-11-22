@@ -1,12 +1,77 @@
+@media screen and (max-width: 800px) {
+
+  .left,
+  .main,
+  .right {
+    width: 100%;
+    /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+body {
+  background-color: black;
+  font-family: 'Square Peg', cursive;
+  font-family: 'Work Sans', sans-serif;
+}
+
 #root {
-  background-color: bisque;
   color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+header {
+  background-color: bisque;
+  height: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: auto;
+  border-radius: 10px;
+}
+
+title {
+  color: black;
+  font-weight: bold;
 }
 
 li {
   list-style: none;
   border: 2px;
+  background-color: bisque;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: auto;
+  padding: 5%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4fr);
 }
+
+h2 {
+  font-weight: bold;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: grey;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: black;
+}
+
