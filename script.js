@@ -7,7 +7,7 @@ const selectedShowsElement = document.getElementById("selectedShows");
 let currentEpisodes = [];
 let searchFilter = "";
 
-let allEpisodes = getAllEpisodes();
+//let// allEpisodes = getAllEpisodes();
 //let showID = getShowID();
 
 let allShows = getAllShows();
@@ -55,8 +55,10 @@ loadShowList(allShows);
 
 selectShowElement.addEventListener("change", (event) => {
   const showID = event.target.value;
-  if (showID === "All") {
-    return getAllShows;
+  if (showID === "all") {
+    clearRootElement();
+    loadShowList(allShows);
+    return;
   }
   clearEpisodeDropDown();
   fetch(`https://api.tvmaze.com/shows/${showID}/episodes`)
@@ -75,10 +77,11 @@ function loadShowList(shows) {
   const episodeOptionElement = document.createElement("option");
   episodeOptionElement.value = allShows;
   episodeOptionElement.innerText = "All";
+  shows.sort((showA, showB) => {
+    return showA.name - showB.name;
+  });
   shows.forEach((show) => {
-    shows.sort();
     rootElem.appendChild(createShowList(show));
-    //if (shows.length === allShows.length) {
     const showOptionElement = document.createElement("option");
     showOptionElement.innerText = show.name;
     showOptionElement.setAttribute("value", show.id);
